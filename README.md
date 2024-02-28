@@ -67,3 +67,12 @@ Easily start your Reactive RESTful Web Services
 Monitor your application's health using SmallRye Health
 
 [Related guide section...](https://quarkus.io/guides/smallrye-health)
+
+
+### Compile Docker
+
+``` shell
+./mvnw package -Dnative -Dquarkus.native.container-build=true -Dquarkus.container-image.build=true
+
+docker build -f src/main/docker/Dockerfile.native-micro -t danilo1337/code-with-quarkus:latest .
+```
